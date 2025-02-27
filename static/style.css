@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+/* Main container divided into three sections */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.section {
+    width: 80%;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+img {
+    max-width: 300px;
+    margin-top: 20px;
+    display: none;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.hover-box {
+    background: white;
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 10px;
+}
+
+#typewriter {
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive, 'Poppins', sans-serif;
+    color: #ff5733;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.proceed-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Fade-out animation for the hover box */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1.5s forwards;
+}

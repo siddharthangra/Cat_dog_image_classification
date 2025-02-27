@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog vs Cat Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Hover box on load -->
+    <div class="overlay" id="overlay">
+        <div class="hover-box">
+            <p id="typewriter"></p>
+            <button class="proceed-btn" onclick="closeOverlay()">Proceed</button>
+        </div>
+    </div>
+
+    <!-- Main content divided into three sections -->
+    <div class="container">
+        <div class="section">
+            <h2>Upload an image of a Dog or Cat</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="uploadImage()">Predict</button>
+        </div>
+        
+        <div class="section">
+            <h2>Uploaded Image</h2>
+            <img id="previewImage">
+        </div>
+        
+        <div class="section">
+            <h2>Prediction Result</h2>
+            <div class="result" id="predictionResult">🐾 Waiting for image upload... 🐾</div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
